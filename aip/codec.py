@@ -242,7 +242,7 @@ def compress(
     candidates = find_candidates(data)
     selected = candidates
     used_ai = candidate_selector is not None
-    if candidate_selector is not None and candidates:
+    if candidate_selector is not None:
         allowed = {candidate.id: candidate for candidate in candidates}
         try:
             ids = list(candidate_selector(candidates))
